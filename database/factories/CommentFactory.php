@@ -19,7 +19,8 @@ class CommentFactory extends Factory
         return [
             "title" => fake()->title(),
             "body" => fake()->text(),
-            "company_id" => 1
+            "company_id" => 1,
+            "post_id"=> 1
         ];
     }
 }
