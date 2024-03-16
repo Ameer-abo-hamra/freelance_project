@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('portfolios', function (Blueprint $table) {
+        Schema::create('skills_services', function (Blueprint $table) {
             $table->id();
-            $table->string("url");
-            $table->foreignId("job_seeker_id")->nullable()->references("id")->on("job_seekers");
-            $table->foreignId("company_id")->nullable()->references("id")->on("companies");
+            $table->foreignId("skill_id")->references("id")->on("skills");
+            $table->foreignId("service_id")->references("id")->on("services");
             $table->timestamps();
         });
     }
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('portfolios');
+        Schema::dropIfExists('skills_services');
     }
 };
