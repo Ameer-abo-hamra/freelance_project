@@ -20,7 +20,7 @@ class CommentFactory extends Factory
             "title" => fake()->title(),
             "body" => fake()->text(),
             "company_id" => 1,
-            "post_id" => 1
+            "post_id" => 1,
         ];
     }
 }
