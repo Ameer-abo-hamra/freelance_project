@@ -9,6 +9,10 @@ class Customer extends Model
 {
     use HasFactory;
     protected $fillable = ["first-name","last-name"];
+
+
+
+
     public function services(){
         return $this->hasMany(Service::class,"service_id");
     }
