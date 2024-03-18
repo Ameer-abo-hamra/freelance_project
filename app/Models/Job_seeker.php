@@ -53,4 +53,8 @@ class Job_seeker extends Model
     public function commentLikes(){
         return $this->hasMany(Comment_like::class , "job_seeker_id");
     }
+
+    public function portfolio(){
+        return $this->hasMany(Portfolio::class,"job_seeker_id");
+    }
 }

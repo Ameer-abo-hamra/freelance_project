@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->id();
+            $table->string("description");
+            $table->foreignId("customer_id")->nullable()->references("id")->on("customers");
+            $table->foreignId("job_seeker_id")->nullable()->references("id")->on("job_seekers");
+            $table->foreignId("company_id")->nullable()->references("id")->on("companies");
             $table->timestamps();
         });
     }

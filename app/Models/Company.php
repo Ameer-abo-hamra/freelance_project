@@ -43,5 +43,8 @@ class Company extends Model
         return $this->hasMany(Post_like::Class, "company_id");
     }
 
+    public function portfolio(){
+        return $this->hasMany(Portfolio::class,"company_id");
+    }
 
 }
