@@ -10,6 +10,8 @@ class Skill extends Model
     use HasFactory;
     protected $fillable = ["category", "skill_name"];
 
+
+    
     public function jobSeekers()
     {
         return $this->belongsToMany(Job_seeker::Class, "job_seekers_skills", "skill_id", "job_seeker_id");
