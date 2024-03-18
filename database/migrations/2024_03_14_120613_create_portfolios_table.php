@@ -15,6 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string("url");
             $table->foreignId("job_seeker_id")->nullable()->references("id")->on("job_seekers");
+
+
+
             $table->foreignId("company_id")->nullable()->references("id")->on("companies");
             $table->timestamps();
         });
